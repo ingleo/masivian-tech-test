@@ -1,0 +1,19 @@
+{
+  "name": "masivian-tech-test",
+  "version": "1.0.0",
+  "description": "Prueba técnica para masivian",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingleo/masivian-tech-test.git"
+  },
+  "author": "Leonardo González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingleo/masivian-tech-test/issues"
+  },
+  "homepage": "https://github.com/ingleo/masivian-tech-test#readme"
+}
