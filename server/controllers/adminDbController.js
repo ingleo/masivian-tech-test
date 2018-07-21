@@ -27,18 +27,30 @@ const cargarBD = () => {
 
 
 const agregarNodos = (cadena) => {
-    cargarBD();
-    let arr = cadena.split(",");
+    return new Promise((resolve, reject) => {
+        cargarBD();
+        let arr = cadena.split(",");
+        arr.forEach(function(valor) {
 
-    arr.forEach(function(valor) {
-        let valorNumero = parseInt(valor);
-        arbolBinario.insertarNuevo(valorNumero);
+        })
+
+        arr.forEach(function(valor) {
+            if (isNaN(valor)) {
+                reject(`El nodo ${valor} es una letra y no puede ser guardado`);
+                throw new Error('El nodo es una letra');
+            }
+            let valorNumero = parseInt(valor);
+            arbolBinario.insertarNuevo(valorNumero);
+        });
+        bdJson = JSON.stringify(arbolBinario);
+
+        if (!bdJson) {
+            reject(`Existe un error guardando los nodos a la bd`);
+        } else {
+            resolve(`Secuencia ingresada correctamente`);
+        }
+        guardarBD();
     });
-
-    bdJson = JSON.stringify(arbolBinario);
-
-    console.log(bdJson + '\n');
-    guardarBD();
 };
 
 
