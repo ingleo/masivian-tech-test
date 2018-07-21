@@ -1,3 +1,5 @@
+// Clase para contener cada nodo del arbol
+
 class Nodo {
     constructor(valor) {
         this.valor = valor;

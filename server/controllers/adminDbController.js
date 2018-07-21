@@ -5,6 +5,7 @@ const Nodo = require('../models/nodo');
 let arbolBinario = new ArbolBinario();
 let bdJson = {};
 
+//Funcion para guardar el arbol en un archivo como base de datos 
 const guardarBD = () => {
 
     fs.writeFile(`db/arbol.json`, bdJson, (err) => {
@@ -16,6 +17,7 @@ const guardarBD = () => {
     });
 };
 
+// Funcion para cargar el archivo de base de datos
 const cargarBD = () => {
     try {
         let arbolBinario = require('../../db/arbol.json');
@@ -25,7 +27,7 @@ const cargarBD = () => {
     }
 };
 
-
+// Funcion para agregar la secuencia de nodos y agregarlos al arbol
 const agregarNodos = (cadena) => {
     return new Promise((resolve, reject) => {
         cargarBD();
@@ -53,7 +55,7 @@ const agregarNodos = (cadena) => {
     });
 };
 
-
+// Funcion para convertir el objeto de la bd a la estructura de objetos javascript
 const convertirJsonClase = (objetoJson) => {
 
     if (arbolBinario.raiz === null) {
@@ -72,6 +74,7 @@ const convertirJsonClase = (objetoJson) => {
     }
 }
 
+// Funcion recursiva para ir armando los nodos del arbol como objetos javascript
 const agregarNodo = (objetoJson, ruta) => {
 
     if (objetoJson.izquierda !== null) {

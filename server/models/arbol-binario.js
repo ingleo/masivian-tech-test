@@ -1,5 +1,6 @@
 const Nodo = require('./nodo');
 
+// Clase para manejar el arbol binario
 class ArbolBinario {
 
     constructor() {
