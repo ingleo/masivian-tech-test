@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom-style.css">
+    <title>REST Arbol binario</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">API REST para manejo de arbol binario</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="jumbotron">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Método HTTP</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>POST</td>
+                    <td>http://localhost:3000/v1/nodos</td>
+                    <td>{secuencia: 70,84,85}</td>
+                    <td>Crea los nodos a un arbol, sino existe crea el arbol</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>http://localhost:3000/v1/nodos/ancestro/?nuno=29&ndos=55</td>
+                    <td>N/A</td>
+                    <td>Obtiene el ancestro común mas cercano de dos nodos</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>http://localhost:3000/v1/arbol</td>
+                    <td>N/A</td>
+                    <td>Obtiene el arbol binario actual</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>http://localhost:3000/v1/arbol</td>
+                    <td>N/A</td>
+                    <td>Borra el arbol binario actual</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        Leo González 2018
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
