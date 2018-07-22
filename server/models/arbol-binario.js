@@ -24,7 +24,6 @@ class ArbolBinario {
         if (nuevoNodo.valor === nodo.valor) {
             return;
         }
-
         if (nuevoNodo.valor < nodo.valor) {
             if (nodo.izquierda === null) {
                 nodo.izquierda = nuevoNodo;
@@ -40,26 +39,24 @@ class ArbolBinario {
         }
     }
 
+    // Obtener raiz
+    obtenerRaiz() {
+        return this.raiz;
+    }
+
     //Encontrar el ancestro común mas cercano
     ancestroComun(nodoRaiz, nodo1, nodo2) {
-
         if (nodoRaiz === null) {
             return null;
         }
-
-        //si es menor a raiz
         if (nodoRaiz.valor > nodo1 && nodoRaiz.valor > nodo2) {
             return this.ancestroComun(nodoRaiz.izquierda, nodo1, nodo2);
         }
-
-        //si es mayor a raiz
         if (nodoRaiz.valor < nodo1 && nodoRaiz.valor < nodo2) {
             return this.ancestroComun(nodoRaiz.derecha, nodo1, nodo2);
         }
-
         return nodoRaiz;
     }
-
 }
 
 module.exports = ArbolBinario;

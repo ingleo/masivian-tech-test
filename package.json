@@ -19,6 +19,7 @@
     "homepage": "https://github.com/ingleo/masivian-tech-test#readme",
     "dependencies": {
         "body-parser": "^1.18.3",
-        "express": "^4.16.3"
+        "express": "^4.16.3",
+        "underscore": "^1.9.1"
     }
 }
